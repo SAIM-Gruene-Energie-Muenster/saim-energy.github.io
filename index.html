@@ -1,35 +1,48 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <meta charset="UTF-8">
-            <title>Gustavs HTML</title>
-           
-            <style>
-                table, th, td {
-                  border: 1px solid rgb(153, 81, 201)
-                }
-            </style>
-        </head>
-        <body>
-            <hr width="50">
-            <hr width="100">
-            <hr width="150">
-            <h2 align="center"> Geosoftware1 Practice</h2>
-            <table align="center" id="table1">
-                <tr>
-                    <th>length of distances<br /> in Meters</th>
-                    <th>startcoordinate <br /> (lon/lat)</th>
-                    <th>endcoordinate <br /> (lon/lat)</th>
-                    <th width="80">inside polygone</th>
-                </tr>
-            </table>
-            <script language="JavaScript">
-                
-            </script>
-            <a href="https://github.com/OTI2020/geosoft1_2021" target="_blank"> Visit My GitHub Repository </a>
-            <script defer type="text/javascript" src="datastore_2/polygon.js"></script> 
-            <script defer type="text/javascript" src="datastore_2/route.js"></script> 
-            <script defer type="text/javascript" src="uebung_2.js"></script> 
-            <script defer type="text/javascript" src="main_2.js"></script>
-        </body> 
-    </html> 
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gustavs HTML</title>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid rgb(153, 81, 201)
+        }
+        #map { height: 180px; }
+    </style>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+</head>
+
+<body>
+    <div id="map"></div>
+    <hr width="50">
+    <hr width="100">
+    <hr width="150">
+    <h2 align="center"> Geosoftware1 Practice</h2>
+    <table align="center" id="table1">
+        <tr>
+            <th>length of distances<br /> in Meters</th>
+            <th>startcoordinate <br /> (lon/lat)</th>
+            <th>endcoordinate <br /> (lon/lat)</th>
+            <th width="80">inside polygone</th>
+        </tr>
+    </table>
+    <script language="JavaScript">
+
+    </script>
+
+    <a href="https://github.com/OTI2020/geosoft1_2021" target="_blank"> Visit My GitHub Repository </a>
+
+    <script src="script.js"> </script>
+</body>
+
+</html>
