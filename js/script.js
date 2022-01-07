@@ -24,13 +24,13 @@ var LeafIcon = L.Icon.extend({
     }
     });
 
-    console.log(ladesaulen.length);
+ 
 
     for (var i = 0; i<ladesaulen.length;i++){
       //for (var i = 0; i<20;i++){
     
         L.marker(change(return_coords(ladesaulen,i))).addTo(map) // [51.5, -0.09] change(convert_GJSON_to_Array(busstops,i))
-        .bindPopup("Bezeichnung:  ")
+        .bindPopup("Betreiber:"+ ladesaulen[i].Betreiber +'<br>'+"Adresse:"+ ladesaulen[i].Adresse+'<br>'+"Postleitzahl und Ort:"+ladesaulen[i]["Postleitzahl Ort"] + '<br>' + "Inbetriebnahmedatum:"+ ladesaulen[i].Inbetriebnahmedatum+ '<br>' + "Anschussleistung [kW]:"+ladesaulen[i]["Anschlussleistung [kW]"]+ '<br>' + "Art der Ladeeinrichtung"+ ladesaulen[i]["Art der Ladeeinrichtung"]+ '<br>' +"Anzahl Ladepunkte:"+ladesaulen[i]["Anzahl Ladepunkte"]+ '<br>' +"Steckertypen"+ladesaulen[i].Steckertypen1)
       }
 }
 
