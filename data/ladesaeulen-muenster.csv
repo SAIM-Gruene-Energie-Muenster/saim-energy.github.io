@@ -1,4 +1,4 @@
-﻿Betreiber;Adresse;Postleitzahl Ort;Bundesland;Längengrad [DG];Breitengrad [DG];Inbetriebnahmedatum;Anschlussleistung [kW];Art der Ladeeinrichtung;Anzahl Ladepunkte;Steckertypen1;P1 [kW];Public Key1;Steckertypen2;P2 [kW];Public Key2;Steckertypen3;P3 [kW];Public Key3;Steckertypen4;P4 [kW];Public Key4
+﻿Betreiber;Adresse;Postleitzahl Ort;Bundesland;Längengrad;Breitengrad;Inbetriebnahmedatum;Anschlussleistung [kW];Art der Ladeeinrichtung;Anzahl Ladepunkte;Steckertypen1;P1;Public Key1;Steckertypen2;P2 ;Public Key2;Steckertypen3;P3 ;Public Key3;Steckertypen4;P4 ;Public Key4
 innogy eMobility Solutions GmbH;Bohlweg 70-72;48147 Münster;Nordrhein-Westfalen;7,643504;51,966941;08.04.2011;44;Normalladeeinrichtung;2;AC Steckdose Typ 2;22;;AC Steckdose Typ 2;22;;;;;;;
 innogy eMobility Solutions GmbH;Weseler Straße 269;48151 Münster;Nordrhein-Westfalen;7,608871;51,939643;08.04.2011;44;Normalladeeinrichtung;2;AC Steckdose Typ 2;22;;AC Steckdose Typ 2;22;;;;;;;
 L. Stroetmann Lebensmittel GmbH & Co. KG;Friedrich-Ebert-Straße 143;48153 Münster;Nordrhein-Westfalen;7,630839;51,944284;16.03.2020;22;Normalladeeinrichtung;2;AC Steckdose Typ 2;22;;AC Steckdose Typ 2;22;;;;;;;
