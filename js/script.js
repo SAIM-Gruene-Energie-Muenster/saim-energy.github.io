@@ -1,13 +1,15 @@
 main()
 
 function main() {
-  create_leafleatmap()
+  var attributes = "default"
+  create_leafleatmap(attributes)
   //create_marker_for_ls()
 
 }
 
-function create_leafleatmap() {
-  var map = L.map('map').setView([51.9574469, 7.5719975], 13);//7.5719975,51.9574469  51.957, -0.09
+function create_leafleatmap(attributes) {
+ 
+   var map = L.map('map').setView([51.9574469, 7.5719975], 13);//7.5719975,51.9574469  51.957, -0.09
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -24,12 +26,13 @@ function create_leafleatmap() {
     }
   });
 
+ // var markers = L.markerClusterGroup();
 
 
   for (var i = 0; i < ladesaulen.length; i++) {
-    //for (var i = 0; i<20;i++){
 
-    L.marker(change(return_coords(ladesaulen, i))).addTo(map) // [51.5, -0.09] change(convert_GJSON_to_Array(busstops,i))
+
+    L.marker(change(return_coords(ladesaulen, i))).addTo(map)
       .bindPopup(
         "Betreiber:" + ladesaulen[i].Betreiber + '<br>' +
         "Adresse:" + ladesaulen[i].Adresse + '<br>' +
@@ -38,18 +41,45 @@ function create_leafleatmap() {
         "Anschussleistung [kW]:" + ladesaulen[i]["Anschlussleistung [kW]"] + '<br>' +
         "Art der Ladeeinrichtung" + ladesaulen[i]["Art der Ladeeinrichtung"] + '<br>' +
         "Anzahl Ladepunkte:" + ladesaulen[i]["Anzahl Ladepunkte"] + '<br>' +
-        "Steckertypen" + ladesaulen[i].Steckertypen1
+        "Steckertypen" + ladesaulen[i].Steckertypen1 + '<br>' +
+        "Attribut"+ attributes
       )
+
+
+/**     var marker = L.marker(change(return_coords(ladesaulen, i)));
+
+    marker.bindPopup(
+      "Betreiber:" + ladesaulen[i].Betreiber + '<br>' +
+      "Adresse:" + ladesaulen[i].Adresse + '<br>' +
+      "Postleitzahl und Ort:" + ladesaulen[i]["Postleitzahl Ort"] + '<br>' +
+      "Inbetriebnahmedatum:" + ladesaulen[i].Inbetriebnahmedatum + '<br>' +
+      "Anschussleistung [kW]:" + ladesaulen[i]["Anschlussleistung [kW]"] + '<br>' +
+      "Art der Ladeeinrichtung" + ladesaulen[i]["Art der Ladeeinrichtung"] + '<br>' +
+      "Anzahl Ladepunkte:" + ladesaulen[i]["Anzahl Ladepunkte"] + '<br>' +
+      "Steckertypen" + ladesaulen[i].Steckertypen1);
+
+    // add marker
+    markers.addLayer(marker);*/
   }
+
+
+  //this.map.addLayer(markers);
 }
 
 
-function create_marker_for_ls() {
+function create_marker_for_ls(L) {
   for (var i = 0; i < 20; i++) {
     //for (var i = 0; i<20;i++){
 
     L.marker(change(return_coords(ladesaulen, i))).addTo(map) // [51.5, -0.09] change(convert_GJSON_to_Array(busstops,i))
       .bindPopup("Bezeichnung:  ")
+
+    var marker = L.marker(change(return_coords(ladesaulen, i)));
+
+    marker.bindPopup(View(event));
+
+    // add marker
+    markers.addLayer(marker);
   }
 }
 
@@ -94,5 +124,16 @@ function test() {
   console.log(ladesaulen);
 }
 
+
+function selectData() {
+  console.log("button funktioniert");
+  var anfangsdatum = document.getElementById("start_date")
+  var enddatum = document.getElementById("end_date")
+  console.log("A"+ anfangsdatum.value + "E"+ enddatum.value);
+  console.log(anfangsdatum);
+
+
+
+}
 
 
