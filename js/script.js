@@ -130,9 +130,17 @@ function selectData() {
   var anfangsdatum = document.getElementById("start_date")
   var enddatum = document.getElementById("end_date")
   console.log("A"+ anfangsdatum.value + "E"+ enddatum.value);
-  console.log(anfangsdatum);
+  startProcess(anfangsdatum,enddatum)
 
+}
 
+function startProcess(start, ende)
+{
+  window.location = "../saim-energy.github.io/index_ansicht.html";
+
+  sessionStorage.setItem("Start", start);
+  sessionStorage.setItem("Ende", ende);
+  console.log("Überleitung erfolgreich!");
 
 }
 
