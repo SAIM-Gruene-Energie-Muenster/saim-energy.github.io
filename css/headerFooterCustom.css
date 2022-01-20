@@ -35,7 +35,7 @@
 }
 
 #myFooter .footer-copyright {
-    background-color: black;
+    background-color: rgb(73, 45, 45);
     margin:0;
     height: fit-content;
     position: relative;
