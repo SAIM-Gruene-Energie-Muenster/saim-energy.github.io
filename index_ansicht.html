@@ -43,13 +43,22 @@
         <!--Main Content-->
         <div id="contentFrame" class="d-flex justify-content-center flex-wrap align-items-center p-5">
             <div id="textContent" class=" col col-lg-4 col-12 rounded text-center">
-                <h1> E-Ladestationen in Münster</h1>
-                <p>hier sind die Wetherdaten zum Beginn des gewählten Zeitraumes:</p>
-                <div id="weather_data"></div>            
+                <h1> Strommixdaten im PopUp</h1>
+                <p> Dazu die aktuellen Wetherdaten:</p>
+                <div id="weather_data">
+                    <table id="weather_table">
+                        <tr>
+                            <th>Company</th>
+                            <th>Contact</th>
+                            <th>Country</th>
+                          </tr>
+                    </table>
+                </div>            
             </div>
             <div id="map" class="col col-lg-8 col-12 border border-dark rounded align-self-lg-end"></div>
             <script src="../saim-energy.github.io/data/ladesaulen.js"></script>
             <script src="../saim-energy.github.io/data/strommix.js"></script>
+            <script src="../saim-energy.github.io.env"> </script>
             <script src="../saim-energy.github.io/js/script.js"></script>
             <script src="../saim-energy.github.io/js/weather.js"></script>
         </div>
