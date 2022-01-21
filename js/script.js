@@ -9,7 +9,7 @@ function main() {
 
 function create_leafleatmap(attributes) {
  
-   var map = L.map('map').setView([51.9574469, 7.5719975], 13);//7.5719975,51.9574469  51.957, -0.09
+   var map = L.map('map').setView([51.964068, 7.621971], 13);//7.5719975,51.9574469  51.957, -0.09
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
