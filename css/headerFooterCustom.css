@@ -18,7 +18,7 @@
     color: #f2f2f2;
   }
   .navbar a.active {
-    background-color: rgb(46,96,138);
+    background-color: rgb(73, 45, 45);
     color: white;
   }
 
@@ -35,7 +35,7 @@
 }
 
 #myFooter .footer-copyright {
-    background-color: black;
+    background-color: rgb(73, 45, 45);
     margin:0;
     height: fit-content;
     position: relative;
