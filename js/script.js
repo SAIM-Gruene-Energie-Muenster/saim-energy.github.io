@@ -37,7 +37,7 @@ function create_leafleatmap(attributes) {
   shadowSize: [41, 41]
 });
 
-// this is for red marker, if neede, but we are not sure, if they are really without 100% green energy
+// this is for red marker - currently unused since we weren't 100% sure whether those really are green energy
 /*
 var redIcon = new L.Icon({
   iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
