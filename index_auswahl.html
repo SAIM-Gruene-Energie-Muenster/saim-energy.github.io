@@ -47,8 +47,10 @@
                 <p>Klicken Sie die PopUps an, für mehr Info</p>
                 <div id="introduction">
                     <p>Text zur Karte ...</p>
-                    <input type="date" id="start_date" name="trip-start" value="2020-05-22" min="2020-04-11" max="2018-12-31">
-                    <input type="date" id="end_date" name="trip-start" value="2021-01-01" min="2021-07-10" max="2018-12-31">
+                    <p>Startzeit</p>
+                    <input type="time" id="start_date" name="trip-start" value="00:00" min="00:00" max="23:30">
+                    <p>Endzeit</p>
+                    <input type="time" id="end_date" name="trip-start" value="23:45" min="00:15" max="23:45">
                     <br>
                     <br>
                     <button id="submit_button" onclick="selectData()">submit </button>
