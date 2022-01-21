@@ -13,8 +13,8 @@ if(api_key != ''){
         dataType: "JSON",
         success: function(data){
             console.log(data)
-            console.log(data.wind.deg);
-            console.log(data.clouds);
+            console.log(data.wind);
+            console.log(data.wind.gust);
             create_weather_table(data)        
         }
     })
@@ -31,8 +31,9 @@ function create_weather_table(input_data) {
     row.insertCell().innerHTML = input_data.weather[0].icon
     row.insertCell().innerHTML = input_data.clouds.all
     row.insertCell().innerHTML = input_data.wind.deg
-    row.insertCell().innerHTML = input_data.wind.gust
+    if (typeof(input_data.wind.gust) === "gust") {
+        row.insertCell().innerHTML = input_data.wind.gust
+    } else row.insertCell().innerHTML = "N.N."
     row.insertCell().innerHTML = input_data.wind.speed
-    
     return -1
 }
