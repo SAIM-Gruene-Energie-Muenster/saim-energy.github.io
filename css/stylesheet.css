@@ -10,7 +10,7 @@ body {
 #main{ height: 95vh;}
 #map {
     width: 300px; 
-    height: 600px;
+    height: 300px;
     display: inline-block;
     box-shadow: 5px 5px 10px;
     box-shadow: grey;
@@ -24,6 +24,15 @@ body {
 #contentFrame{
     position: relative;
     top: 5rem;
+}
+#weather_table{
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+    background-color: rgba(15, 94, 74, 0.5) !important;
+}
+#th, td { 
+    border:1px solid rgb(5, 83, 79); 
 }
 #spacer{
     height: 6.5rem;
