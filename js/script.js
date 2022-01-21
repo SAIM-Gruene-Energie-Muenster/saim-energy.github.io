@@ -37,11 +37,22 @@ function create_leafleatmap(attributes) {
   shadowSize: [41, 41]
 });
 
+// this is for red marker, if neede, but we are not sure, if they are really without 100% green energy
+/*
+var redIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+*/
 
 
   for (var i = 0; i < ladesaulen.length; i++) {
 
-    if (ladesaulen[i].Betreiber == "innogy eMobility Solutions GmbH") {
+    if (ladesaulen[i].Ökostrom == "TRUE") {
       L.marker(change(return_coords(ladesaulen, i)), {icon: greenIcon}).addTo(map)
       .bindPopup(
         "Betreiber:" + ladesaulen[i].Betreiber + '<br>' +
@@ -55,7 +66,7 @@ function create_leafleatmap(attributes) {
         "Attribut"+ attributes
       )
     } else {
-      L.marker(change(return_coords(ladesaulen, i))).addTo(map)
+      L.marker(change(return_coords(ladesaulen, i)), /*{icon: redIcon}*/).addTo(map)
       .bindPopup(
         "Betreiber:" + ladesaulen[i].Betreiber + '<br>' +
         "Adresse:" + ladesaulen[i].Adresse + '<br>' +
