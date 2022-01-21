@@ -42,15 +42,18 @@ function calc_average(elmt) {
   var t2 = parseFloat(elmt[2].biomasse.wert) + parseFloat(elmt[3].biomasse.wert)
   console.log("t2");
   console.log(t2);
+  var test
   for (var i = 0; i < elmt.length; i++) {
     console.log(parseFloat(elmt[i].biomasse.wert));
-     sum_biomasse = sum_biomasse + parseFloat(elmt[i].biomasse.wert)
-     sum_wasserkraft += parseFloat(elmt[i].wasserkraft.wert)
-     sum_windoff += parseFloat(elmt[i].windoffshore.wert)
-     sum_windon += parseFloat(elmt[i].windonshore.wert)
+    test =+ parseFloat(elmt[i].biomasse.wert)
+     sum_biomasse = sum_biomasse +  parseFloat(elmt[i].biomasse.wert)
+     sum_wasserkraft = sum_wasserkraft+ parseFloat(elmt[i].wasserkraft.wert)
+     sum_windoff = sum_windoff+ parseFloat(elmt[i].windoffshore.wert)
+     sum_windon = sum_windon+ parseFloat(elmt[i].windonshore.wert)
   }
   console.log("sum_biomasse");
   console.log(sum_biomasse);
+  console.log(test);
 
   var result = {
   }
