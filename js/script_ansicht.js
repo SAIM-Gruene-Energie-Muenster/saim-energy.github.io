@@ -2,11 +2,11 @@ main()
 
 function main() {
   var timeframe = return_timeframe()
-
+  console.log(SM_WT);
 
   var filtered_data = filterData(timeframe)
 
-  var analzyed_data = analzyed_data(filtered_data)
+  var analzyed_data = analzyed_data_func(filtered_data)
 
   console.log(Strommix);
   //create_leafleatmap()
@@ -20,21 +20,46 @@ function return_timeframe() {
   return timeframe
 }
 
-function analzyed_data(fd) {
- 
+function analzyed_data_func(fd) {
+var ave = calc_average(fd)
+console.log("schnitt");
+console.log(ave);
 
 }
 
-function calc_average(array) {
-  for (var i = 0; i < Math.floor(fd.length/4); i++) {
-    var hour_av
-    for(var j=0; j<3;j++){
-      hour_av =+ fd[i+j].biomasse.wert
-    }
-    
+function calc_average(elmt) {
+  console.log(elmt);
+  var av_biomasse
+  var av_wasserkraft
+  var av_windoff
+  var av_windon
 
+  var sum_biomasse
+  var sum_wasserkraft
+  var sum_windoff
+  var sum_windon
+
+  var t2 = parseFloat(elmt[2].biomasse.wert) + parseFloat(elmt[3].biomasse.wert)
+  console.log("t2");
+  console.log(t2);
+  for (var i = 0; i < elmt.length; i++) {
+    console.log(parseFloat(elmt[i].biomasse.wert));
+     sum_biomasse = sum_biomasse + parseFloat(elmt[i].biomasse.wert)
+     sum_wasserkraft += parseFloat(elmt[i].wasserkraft.wert)
+     sum_windoff += parseFloat(elmt[i].windoffshore.wert)
+     sum_windon += parseFloat(elmt[i].windonshore.wert)
   }
-  
+  console.log("sum_biomasse");
+  console.log(sum_biomasse);
+
+  var result = {
+  }
+ result.av_biomasse = sum_biomasse/elmt.length
+ result.av_wasserkraft =  sum_wasserkraft/elmt.length
+ result.av_windoff =  sum_windoff/elmt.length
+ result.av_windon =  sum_windon/elmt.length
+
+ return result
 }
 
 
@@ -51,10 +76,10 @@ function filterData(tf) {
    console.log(SM_ST.kategorien.kategorie.bausteine.baustein[0].werte)*/
 
 
-  var werte_biomasse = SM_ST.kategorien.kategorie.bausteine.baustein[1].werte
-  var werte_wasserkraft = SM_ST.kategorien.kategorie.bausteine.baustein[2].werte
-  var werte_windoffshore = SM_ST.kategorien.kategorie.bausteine.baustein[3].werte
-  var werte_windonshore = SM_ST.kategorien.kategorie.bausteine.baustein[4].werte
+  var werte_biomasse = SM_ST.kategorien.kategorie.bausteine.baustein[0].werte
+  var werte_wasserkraft = SM_ST.kategorien.kategorie.bausteine.baustein[1].werte
+  var werte_windoffshore = SM_ST.kategorien.kategorie.bausteine.baustein[2].werte
+  var werte_windonshore = SM_ST.kategorien.kategorie.bausteine.baustein[3].werte
 
   var first_index = getArrayIndexFromBaustein(tf.start, werte_biomasse)
   var last_index = getArrayIndexFromBaustein(tf.ende, werte_biomasse)
