@@ -9,7 +9,7 @@ function main() {
 
 function create_leafleatmap(attributes) {
  
-   var map = L.map('map').setView([51.9574469, 7.5719975], 13);//7.5719975,51.9574469  51.957, -0.09
+   var map = L.map('map').setView([51.964068, 7.621971], 13);//7.5719975,51.9574469  51.957, -0.09
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -28,11 +28,32 @@ function create_leafleatmap(attributes) {
 
  // var markers = L.markerClusterGroup();
 
+ var greenIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+// this is for red marker - currently unused since we weren't 100% sure whether those really are green energy
+/*
+var redIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+*/
+
 
   for (var i = 0; i < ladesaulen.length; i++) {
 
-
-    L.marker(change(return_coords(ladesaulen, i))).addTo(map)
+    if (ladesaulen[i].Ökostrom == "TRUE") {
+      L.marker(change(return_coords(ladesaulen, i)), {icon: greenIcon}).addTo(map)
       .bindPopup(
         "Betreiber:" + ladesaulen[i].Betreiber + '<br>' +
         "Adresse:" + ladesaulen[i].Adresse + '<br>' +
@@ -44,6 +65,20 @@ function create_leafleatmap(attributes) {
         "Steckertypen" + ladesaulen[i].Steckertypen1 + '<br>' +
         "Attribut"+ attributes
       )
+    } else {
+      L.marker(change(return_coords(ladesaulen, i)), /*{icon: redIcon}*/).addTo(map)
+      .bindPopup(
+        "Betreiber:" + ladesaulen[i].Betreiber + '<br>' +
+        "Adresse:" + ladesaulen[i].Adresse + '<br>' +
+        "Postleitzahl und Ort:" + ladesaulen[i]["Postleitzahl Ort"] + '<br>' +
+        "Inbetriebnahmedatum:" + ladesaulen[i].Inbetriebnahmedatum + '<br>' +
+        "Anschussleistung [kW]:" + ladesaulen[i]["Anschlussleistung [kW]"] + '<br>' +
+        "Art der Ladeeinrichtung" + ladesaulen[i]["Art der Ladeeinrichtung"] + '<br>' +
+        "Anzahl Ladepunkte:" + ladesaulen[i]["Anzahl Ladepunkte"] + '<br>' +
+        "Steckertypen" + ladesaulen[i].Steckertypen1 + '<br>' +
+        "Attribut"+ attributes
+      )
+    }  
 
 
 /**     var marker = L.marker(change(return_coords(ladesaulen, i)));

@@ -27,13 +27,13 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link text-light rounded" href="../saim-energy.github.io/index_auswahl.html">Übersicht</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light rounded" href="../saim-energy.github.io/impressum.html">Impressum</a>
+                        <a class="nav-link text-light active rounded" href="../saim-energy.github.io/index_auswahl.html">Übersicht</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light rounded" href="../saim-energy.github.io/index_ansicht.html">Ansicht</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light rounded" href="../saim-energy.github.io/impressum.html">Impressum</a>
                     </li>
                 </ul>
             </div>
@@ -44,13 +44,16 @@
         <div id="contentFrame" class="d-flex justify-content-center flex-wrap align-items-center p-5">
             <div id="textContent" class=" col col-lg-4 col-12 rounded text-center">
                 <h1> E-Ladestationen in Münster</h1>
+                <p>Ladesäulen mit grünen Markern bieten Ökostrom an. Bei den anderen ist es teils noch unklar.</p>
                 <p>Klicken Sie die PopUps an, für mehr Info</p>
                 <div id="introduction">
+
                     <p>Text zur Karte ...</p>
                     <p>Startzeit</p>
                     <input type="time" id="start_date" name="trip-start" value="00:00" min="00:00" max="23:30">
                     <p>Endzeit</p>
                     <input type="time" id="end_date" name="trip-start" value="23:45" min="00:15" max="23:45">
+
                     <br>
                     <br>
                     <button id="submit_button" onclick="selectData()">submit </button>
