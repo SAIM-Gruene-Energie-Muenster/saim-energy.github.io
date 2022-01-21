@@ -3,7 +3,8 @@ var yValues = [11, 234, 44, 24];
 var barColors = ["green", "blue","gray","brown"];
 
 // get Element by id ?????????
-var day = '2020-02-03'
+var winter_day = '2022-01-04'
+var summer_day = '2022-05-23'
 
 new Chart("myChart", {
   type: "bar",
@@ -18,7 +19,7 @@ new Chart("myChart", {
     legend: {display: false},
     title: {
       display: true,
-      text: "Tagesdurchschnitte "+ day + " in Megawatt:"
+      text: "Tagesdurchschnitte "+ winter_day + " in Megawatt:"
     }
   }
 });
