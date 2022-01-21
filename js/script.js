@@ -28,11 +28,21 @@ function create_leafleatmap(attributes) {
 
  // var markers = L.markerClusterGroup();
 
+ var greenIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+
 
   for (var i = 0; i < ladesaulen.length; i++) {
 
-
-    L.marker(change(return_coords(ladesaulen, i))).addTo(map)
+    if (ladesaulen[i].Betreiber == "innogy eMobility Solutions GmbH") {
+      L.marker(change(return_coords(ladesaulen, i)), {icon: greenIcon}).addTo(map)
       .bindPopup(
         "Betreiber:" + ladesaulen[i].Betreiber + '<br>' +
         "Adresse:" + ladesaulen[i].Adresse + '<br>' +
@@ -44,6 +54,20 @@ function create_leafleatmap(attributes) {
         "Steckertypen" + ladesaulen[i].Steckertypen1 + '<br>' +
         "Attribut"+ attributes
       )
+    } else {
+      L.marker(change(return_coords(ladesaulen, i))).addTo(map)
+      .bindPopup(
+        "Betreiber:" + ladesaulen[i].Betreiber + '<br>' +
+        "Adresse:" + ladesaulen[i].Adresse + '<br>' +
+        "Postleitzahl und Ort:" + ladesaulen[i]["Postleitzahl Ort"] + '<br>' +
+        "Inbetriebnahmedatum:" + ladesaulen[i].Inbetriebnahmedatum + '<br>' +
+        "Anschussleistung [kW]:" + ladesaulen[i]["Anschlussleistung [kW]"] + '<br>' +
+        "Art der Ladeeinrichtung" + ladesaulen[i]["Art der Ladeeinrichtung"] + '<br>' +
+        "Anzahl Ladepunkte:" + ladesaulen[i]["Anzahl Ladepunkte"] + '<br>' +
+        "Steckertypen" + ladesaulen[i].Steckertypen1 + '<br>' +
+        "Attribut"+ attributes
+      )
+    }  
 
 
 /**     var marker = L.marker(change(return_coords(ladesaulen, i)));
