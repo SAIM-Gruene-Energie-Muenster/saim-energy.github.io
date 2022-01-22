@@ -55,28 +55,28 @@ var redIcon = new L.Icon({
     if (ladesaulen[i].Ökostrom == "TRUE") {
       L.marker(change(return_coords(ladesaulen, i)), {icon: greenIcon}).addTo(map)
       .bindPopup(
-        "Betreiber:" + ladesaulen[i].Betreiber + '<br>' +
-        "Adresse:" + ladesaulen[i].Adresse + '<br>' +
-        "Postleitzahl und Ort:" + ladesaulen[i]["Postleitzahl Ort"] + '<br>' +
-        "Inbetriebnahmedatum:" + ladesaulen[i].Inbetriebnahmedatum + '<br>' +
-        "Anschussleistung [kW]:" + ladesaulen[i]["Anschlussleistung [kW]"] + '<br>' +
-        "Art der Ladeeinrichtung" + ladesaulen[i]["Art der Ladeeinrichtung"] + '<br>' +
-        "Anzahl Ladepunkte:" + ladesaulen[i]["Anzahl Ladepunkte"] + '<br>' +
-        "Steckertypen" + ladesaulen[i].Steckertypen1 + '<br>' +
-        "Attribut"+ attributes
+        "Betreiber: " + ladesaulen[i].Betreiber + '<br>' +
+        "Adresse: " + ladesaulen[i].Adresse + '<br>' +
+        "Postleitzahl und Ort :" + ladesaulen[i]["Postleitzahl Ort"] + '<br>' +
+        "Inbetriebnahmedatum :" + ladesaulen[i].Inbetriebnahmedatum + '<br>' +
+        "Anschussleistung [kW] :" + ladesaulen[i]["Anschlussleistung [kW]"] + '<br>' +
+        "Art der Ladeeinrichtung " + ladesaulen[i]["Art der Ladeeinrichtung"] + '<br>' +
+        "Anzahl Ladepunkte: " + ladesaulen[i]["Anzahl Ladepunkte"] + '<br>' +
+        "Steckertypen " + ladesaulen[i].Steckertypen1 + '<br>' +
+        "Attribut "+ attributes
       )
     } else {
       L.marker(change(return_coords(ladesaulen, i)), /*{icon: redIcon}*/).addTo(map)
       .bindPopup(
-        "Betreiber:" + ladesaulen[i].Betreiber + '<br>' +
-        "Adresse:" + ladesaulen[i].Adresse + '<br>' +
-        "Postleitzahl und Ort:" + ladesaulen[i]["Postleitzahl Ort"] + '<br>' +
-        "Inbetriebnahmedatum:" + ladesaulen[i].Inbetriebnahmedatum + '<br>' +
-        "Anschussleistung [kW]:" + ladesaulen[i]["Anschlussleistung [kW]"] + '<br>' +
-        "Art der Ladeeinrichtung" + ladesaulen[i]["Art der Ladeeinrichtung"] + '<br>' +
-        "Anzahl Ladepunkte:" + ladesaulen[i]["Anzahl Ladepunkte"] + '<br>' +
-        "Steckertypen" + ladesaulen[i].Steckertypen1 + '<br>' +
-        "Attribut"+ attributes
+        "Betreiber: " + ladesaulen[i].Betreiber + '<br>' +
+        "Adresse: " + ladesaulen[i].Adresse + '<br>' +
+        "Postleitzahl und Ort: " + ladesaulen[i]["Postleitzahl Ort"] + '<br>' +
+        "Inbetriebnahmedatum: " + ladesaulen[i].Inbetriebnahmedatum + '<br>' +
+        "Anschussleistung [kW]: " + ladesaulen[i]["Anschlussleistung [kW]"] + '<br>' +
+        "Art der Ladeeinrichtung " + ladesaulen[i]["Art der Ladeeinrichtung"] + '<br>' +
+        "Anzahl Ladepunkte: " + ladesaulen[i]["Anzahl Ladepunkte"] + '<br>' +
+        "Steckertypen " + ladesaulen[i].Steckertypen1 + '<br>' +
+        "Attribut "+ attributes
       )
     }  
 
