@@ -12,6 +12,11 @@ function main() {
   var analyzed_data_WT = calc_average(filtered_data_WT)
   var analyzed_data_ST = calc_average(filtered_data_ST)
 
+  sessionStorage.setItem("Analyzed_data_WT", analyzed_data_WT);
+  sessionStorage.setItem("Analyzed_data_ST", analyzed_data_ST);
+  
+  
+
   console.log("analyzed_data_WT");
   console.log(analyzed_data_WT);
   console.log("analyzed_data_ST");
