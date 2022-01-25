@@ -51,14 +51,17 @@
                     <p>Die Daten des exemplarischen Sommertages sind vom 23.05.2021</p>
                     <p>Die Daten des exemplarischen Wintertages sind vom 04.01.2022</p>
 
-                    <p>Startzeit</p>
-                    <input type="time" id="start_date" name="trip-start" value="00:00" min="00:00" max="23:30">
-                    <p>Endzeit</p>
-                    <input type="time" id="end_date" name="trip-start" value="23:45" min="00:15" max="23:45">
-
-                    <br>
-                    <br>
-                    <button id="submit_button" onclick="selectData()">submit </button>
+                    <div id="time-slot-input" class="inline">
+                        <div id="time_start_button">
+                            <p>Startzeit</p>
+                            <input type="time" id="start_date" name="trip-start" value="00:00" min="00:00" max="23:30">
+                        </div>
+                        <div id="time_stop_button">
+                            <p>Endzeit</p>
+                            <input type="time" id="end_date" name="trip-start" value="23:45" min="00:15" max="23:45">
+                        </div>
+                        <button id="submit_button" onclick="selectData()">submit </button>
+                   </div>
                 </div>  
             </div>
             <div id="map" class="col col-lg-8 col-12 border border-dark rounded align-self-lg-end"></div>

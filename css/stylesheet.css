@@ -18,6 +18,14 @@ body {
     box-shadow: 5px 5px 10px;
     box-shadow: grey;
 }
+/*
+#time-slot-input{
+    display: inline-block;
+}*/
+#time_start_button, #time_stop_button{
+    display: inline-block;
+    margin-right: 5px;
+ }
 #textContent{
     color: rgb(12, 55, 90);
     padding: 10px;
