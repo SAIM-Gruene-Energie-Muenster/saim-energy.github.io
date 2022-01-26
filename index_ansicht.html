@@ -55,19 +55,38 @@
     <div id="main" class="container-fluid">
 
         <!--Main Content-->
+        <div id="contentFrame" class="d-flex justify-content-center flex-wrap align-items-center p-5">
+            <div id="textContent" class=" col col-lg-4 col-12 rounded text-center">
+                <h1> Strommixdaten im PopUp</h1>
+                <p>Die Daten des exemplarischen Sommertages sind vom 23.05.2021</p>
+                <p>Die Daten des exemplarischen Wintertages sind vom 04.01.2022</p>
+                
+                <div id="introduction">
 
-        <div class="container-fluid">
+                 
+
+                    <div id="energy_data">
+                        <canvas id="winterchart" style="width:100%;max-width:250px"></canvas>
+                        <canvas id="summerchart" style="width:100%;max-width:250px"></canvas>
+
+                    </div>
+
+                </div>  
+            </div>
+            <div id="map" class="col col-lg-8 col-12 border border-dark rounded align-self-lg-end"></div>
+        </div>
+       <!-- <div class="container-fluid">
             <h1> Strommixdaten im PopUp</h1>
             <p>Die Daten des exemplarischen Sommertages sind vom 23.05.2021</p>
             <p>Die Daten des exemplarischen Wintertages sind vom 04.01.2022</p>
-            <div class="row">
-              
                   
+            <div class="row">
+           
      
 
                 <div class="col-sm-6" id="colum2">
 
-                    <!--p> Dazu die aktuellen Wetherdaten:</p>
+                    p> Dazu die aktuellen Wetherdaten:</p>
                 <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
                 <div id="weather_data">
                     d-flex justify-content-center flex-wrap align-items-center p-5
@@ -84,7 +103,7 @@
 
                 </div>
                 <br>
-                <br-->
+                <br
                     <div id="energy_data">
                         <canvas id="winterchart" style="width:100%;max-width:250px"></canvas>
                         <canvas id="summerchart" style="width:100%;max-width:250px"></canvas>
@@ -95,7 +114,7 @@
                 </div>
                 <div id="map" class="col-sm-6 border border-dark rounded align-self-lg-end"></div>
 
-            </div>
+            </div>-->
         </div>
 
     </div>
@@ -138,18 +157,11 @@
             </div>-->
 
 
-    <script src="../saim-energy.github.io/data/ladesaulen.js"></script>
-    <script src="../saim-energy.github.io/data/Strommix_Sommertag.js"></script>
-    <script src="../saim-energy.github.io/data/Strommix_Wintertag.js"></script>
-    <script src="../saim-energy.github.io/js/script_ansicht.js"></script>
-    <script src="../saim-energy.github.io/js/token.js"> </script>
-    <script src="../saim-energy.github.io/js/script.js"></script>
-    <script src="../saim-energy.github.io/js/weather-table.js"></script>
-    <script src="../saim-energy.github.io/js/energy-chart.js"></script>
-
-
-
 </body>
+
+
+
+
 <!-- FOOTER-->
 <footer id="myFooter" class="row col col-12 bg-dark d-flex flex-column align-items-left">
     <div class="row col col-12 d-flex flex-column ">
@@ -163,5 +175,13 @@
         <p>© 2022 Seminar Aufladen in Münster mit Christian Knoth</p>
     </div>
 </footer>
+<script src="../saim-energy.github.io/data/ladesaulen.js"></script>
+<script src="../saim-energy.github.io/data/Strommix_Sommertag.js"></script>
+<script src="../saim-energy.github.io/data/Strommix_Wintertag.js"></script>
+<script src="../saim-energy.github.io/js/script_ansicht.js"></script>
+<script src="../saim-energy.github.io/js/token.js"> </script>
+<script src="../saim-energy.github.io/js/script.js"></script>
+<script src="../saim-energy.github.io/js/weather-table.js"></script>
+<script src="../saim-energy.github.io/js/energy-chart.js"></script>
 
 </html>
