@@ -12,8 +12,7 @@ function main() {
   var analyzed_data_WT = calc_average(filtered_data_WT)
   var analyzed_data_ST = calc_average(filtered_data_ST)
 
-  sessionStorage.setItem("Analyzed_data_WT", analyzed_data_WT);
-  sessionStorage.setItem("Analyzed_data_ST", analyzed_data_ST);
+  
   
   
 
@@ -23,7 +22,43 @@ function main() {
   console.log(analyzed_data_ST);
 
 
-  //create_leafleatmap()
+
+  sessionStorage.setItem("AD_WT.biomasse", analyzed_data_WT.av_biomasse);
+  sessionStorage.setItem("AD_WT.wasserkraft", analyzed_data_WT.av_wasserkraft);
+  sessionStorage.setItem("AD_WT.windoff", analyzed_data_WT.av_windoff);
+  sessionStorage.setItem("AD_WT.windon", analyzed_data_WT.av_windon);
+
+
+  sessionStorage.setItem("AD_WT.photo", analyzed_data_WT.av_photo);
+  sessionStorage.setItem("AD_WT.sonst_e_energ", analyzed_data_WT.sonst_e_energ);
+  sessionStorage.setItem("AD_WT.kernenergie", analyzed_data_WT.av_kernenergie);
+  sessionStorage.setItem("AD_WT.braunkohle", analyzed_data_WT.av_braunkohle);
+
+  sessionStorage.setItem("AD_WT.steinkohle", analyzed_data_WT.av_steinkohle);
+  sessionStorage.setItem("AD_WT.erdgas", analyzed_data_WT.av_erdgas);
+  sessionStorage.setItem("AD_WT.pumpspeicher", analyzed_data_WT.av_Pumpspeicher);
+  sessionStorage.setItem("AD_WT.sonst_k_energ", analyzed_data_WT.sonst_k_energ);
+
+
+
+
+
+  sessionStorage.setItem("AD_ST.biomasse", analyzed_data_ST.av_biomasse);
+  sessionStorage.setItem("AD_ST.wasserkraft", analyzed_data_ST.av_wasserkraft);
+  sessionStorage.setItem("AD_ST.windoff", analyzed_data_ST.av_windoff);
+  sessionStorage.setItem("AD_ST.windon", analyzed_data_ST.av_windon);
+
+
+  sessionStorage.setItem("AD_ST.photo", analyzed_data_ST.av_photo);
+  sessionStorage.setItem("AD_ST.sonst_e_energ", analyzed_data_ST.sonst_e_energ);
+  sessionStorage.setItem("AD_ST.kernenergie", analyzed_data_ST.av_kernenergie);
+  sessionStorage.setItem("AD_ST.braunkohle", analyzed_data_ST.av_braunkohle);
+
+  sessionStorage.setItem("AD_ST.steinkohle", analyzed_data_ST.av_steinkohle);
+  sessionStorage.setItem("AD_ST.erdgas", analyzed_data_ST.av_erdgas);
+  sessionStorage.setItem("AD_ST.pumpspeicher", analyzed_data_ST.av_Pumpspeicher);
+  sessionStorage.setItem("AD_ST.sonst_k_energ", analyzed_data_ST.sonst_k_energ);
+
 }
 
 function return_timeframe() {

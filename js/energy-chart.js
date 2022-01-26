@@ -1,13 +1,16 @@
-var xValues = ["Biomasse", "Wasserkraft", "Wind Offshore", "Wind Onshore"];
-var yValues = [11, 234, 44, 24];
+
+
+
+var xValues = ["Wasserkraft", "Photovoltaik", "Wind Offshore", "Wind Onshore"];
+var yValues = [sessionStorage.getItem("AD_WT.wasserkraft"), sessionStorage.getItem("AD_WT.photo"), sessionStorage.getItem("AD_WT.windoff"), sessionStorage.getItem("AD_WT.windon")];
 var barColors = ["green", "blue","gray","brown"];
 
 // get Element by id ?????????
 var winter_day = '2022-01-04'
 var summer_day = '2022-05-23'
 
-new Chart("myChart", {
-  type: "bar",
+new Chart("winterchart", {
+  type: "pie",
   data: {
     labels: xValues,
     datasets: [{

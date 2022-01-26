@@ -44,11 +44,11 @@
     
         <!--Main Content-->
         <div id="contentFrame" class="d-flex justify-content-center flex-wrap align-items-center p-5">
+            <div id="map" class="col col-lg-8 col-12 border border-dark rounded align-self-lg-end"></div>
             <div id="textContent" class=" col col-lg-4 col-12 rounded text-center">
                 <h1> Strommixdaten im PopUp</h1>
-                <p>Die Daten des exemplarischen Sommertages sind vom 23.05.2021</p>
-                <p>Die Daten des exemplarischen Wintertages sind vom 04.01.2022</p>
-                <p> Dazu die aktuellen Wetherdaten:</p>
+            
+                <p> Dazu die aktuellen Wetterdaten:</p>
                 <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
                 <div id="weather_data">
                     <table id="weather_table">
@@ -57,7 +57,7 @@
                             <th>cloud<br>coverage (%)</th>
                             <th>degree</th>
                             <th>gust</th>
-                            <th>speed<br>(Knothen)</th>
+                            <th>speed<br>(Knoten)</th>
                         </tr>
                     </table>
 
@@ -65,10 +65,12 @@
                 <br>
                 <br>
                 <div id="energy_data">
-                    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-                </div>            
+                    <canvas id="winterchart" style="width:100%;max-width:250px"></canvas>
+                    <canvas id="summerchart" style="width:100%;max-width:250px"></canvas>
+                </div>
+                         
             </div>
-            <div id="map" class="col col-lg-8 col-12 border border-dark rounded align-self-lg-end"></div>
+            
             <script src="../saim-energy.github.io/data/ladesaulen.js"></script>
             <script src="../saim-energy.github.io/data/Strommix_Sommertag.js"></script>
             <script src="../saim-energy.github.io/data/Strommix_Wintertag.js"></script>
