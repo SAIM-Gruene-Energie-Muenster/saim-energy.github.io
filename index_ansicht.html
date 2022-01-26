@@ -1,57 +1,76 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <title>saim-energy Münster</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--_____LEAFLET CSS_____-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
     <!--_____OWN CSS_____-->
     <link rel="stylesheet" href="../saim-energy.github.io/css/headerFooterCustom.css">
     <link rel="stylesheet" href="../saim-energy.github.io/css/stylesheet.css">
     <!--_____LEAFLET JAVASCRIPT_____-->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script
+        src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
     <!--_____BOOTSTRAP - JQUERY AJAX JAVASCRIPT_____-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!--_____BAR CHART_____-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top p-1">
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-light rounded" href="../saim-energy.github.io/index.html">Übersicht</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light active rounded"
+                        href="../saim-energy.github.io/index_ansicht.html">Ansicht</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light rounded" href="../saim-energy.github.io/impressum.html">Impressum</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </head>
+
 <body>
-    <div id="main" class="container-fluid no-gutters">
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top p-1">
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link text-light rounded" href="../saim-energy.github.io/index.html">Übersicht</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light active rounded" href="../saim-energy.github.io/index_ansicht.html">Ansicht</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light rounded" href="../saim-energy.github.io/impressum.html">Impressum</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    
-    
+
+
+    <div id="main" class="container-fluid">
+
         <!--Main Content-->
-        <div id="contentFrame" class="d-flex justify-content-center flex-wrap align-items-center p-5">
-            <div id="map" class="col col-lg-8 col-12 border border-dark rounded align-self-lg-end"></div>
-            <div id="textContent" class=" col col-lg-4 col-12 rounded text-center">
-                <h1> Strommixdaten im PopUp</h1>
-                <p>Die Daten des exemplarischen Sommertages sind vom 23.05.2021</p>
-                <p>Die Daten des exemplarischen Wintertages sind vom 04.01.2022</p>
-                <!--p> Dazu die aktuellen Wetherdaten:</p>
+
+        <div class="container-fluid">
+            <h1> Strommixdaten im PopUp</h1>
+            <p>Die Daten des exemplarischen Sommertages sind vom 23.05.2021</p>
+            <p>Die Daten des exemplarischen Wintertages sind vom 04.01.2022</p>
+            <div class="row">
+              
+                  
+     
+
+                <div class="col-sm-6" id="colum2">
+
+                    <!--p> Dazu die aktuellen Wetherdaten:</p>
                 <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
                 <div id="weather_data">
+                    d-flex justify-content-center flex-wrap align-items-center p-5
                     <table id="weather_table">
                         <tr>
                             <th>Datum</th>
@@ -66,36 +85,83 @@
                 </div>
                 <br>
                 <br-->
+                    <div id="energy_data">
+                        <canvas id="winterchart" style="width:100%;max-width:250px"></canvas>
+                        <canvas id="summerchart" style="width:100%;max-width:250px"></canvas>
+
+                    </div>
+
+
+                </div>
+                <div id="map" class="col-sm-6 border border-dark rounded align-self-lg-end"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!--
+
+
+        <div id="contentFrame" class=" d-flex justify-content-center flex-wrap align-items-center p-5">
+            <div id="map" class="col col-lg-8 col-12 border border-dark rounded align-self-lg-end"></div>
+            <div id="textContent" class=" col col-lg-4 col-12 rounded text-center">
+                <h1> Strommixdaten im PopUp</h1>
+                <p>Die Daten des exemplarischen Sommertages sind vom 23.05.2021</p>
+                <p>Die Daten des exemplarischen Wintertages sind vom 04.01.2022</p>
+                <!--p> Dazu die aktuellen Wetherdaten:</p>
+                <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
+                <div id="weather_data">
+                    d-flex justify-content-center flex-wrap align-items-center p-5
+                    <table id="weather_table">
+                        <tr>
+                            <th>Datum</th>
+                            <th>Beschribung</th>
+                            <th>Wolken-<br>bedeckung (%)</th>
+                            <th>Windrichtung</th>
+                            <th>gust</th>
+                            <th>speed<br>(Knoten)</th>
+                        </tr>
+                    </table>
+
+                </div>
+                <br>
+                <br
                 <div id="energy_data">
                     <canvas id="winterchart" style="width:100%;max-width:250px"></canvas>
                     <canvas id="summerchart" style="width:100%;max-width:250px"></canvas>
                 </div>
-                         
-            </div>
-            
-            <script src="../saim-energy.github.io/data/ladesaulen.js"></script>
-            <script src="../saim-energy.github.io/data/Strommix_Sommertag.js"></script>
-            <script src="../saim-energy.github.io/data/Strommix_Wintertag.js"></script>
-            <script src="../saim-energy.github.io/js/script_ansicht.js"></script>
-            <script src="../saim-energy.github.io/js/token.js"> </script>
-            <script src="../saim-energy.github.io/js/script.js"></script>
-            <script src="../saim-energy.github.io/js/weather-table.js"></script>
-            <script src="../saim-energy.github.io/js/energy-chart.js"></script>
-        </div>
-    </div>
+                <div id="map" class="col col-lg-8 col-12 border border-dark rounded align-self-lg-end"></div>
+            </div>-->
 
-    <!-- FOOTER-->
-    <footer id="myFooter" class="row col col-12 bg-dark d-flex flex-column align-items-left">
-        <div class="row col col-12 d-flex flex-column ">
-            <p><b>Links</b><br>
-                <a href="https://www.uni-muenster.de/de/">University</a><br>
-                <a href="https://github.com/SAIM-Gruene-Energie-Muenster/saim-energy.github.io">GitHub Repository</a>
-            </p>
-        </div>
-        <div id="copyrightText" class="footer-copyright">
-            <p>© 2022 Seminar Aufladen in Münster mit Christian Knoth</p>
-        </div>
-    </footer>
+
+    <script src="../saim-energy.github.io/data/ladesaulen.js"></script>
+    <script src="../saim-energy.github.io/data/Strommix_Sommertag.js"></script>
+    <script src="../saim-energy.github.io/data/Strommix_Wintertag.js"></script>
+    <script src="../saim-energy.github.io/js/script_ansicht.js"></script>
+    <script src="../saim-energy.github.io/js/token.js"> </script>
+    <script src="../saim-energy.github.io/js/script.js"></script>
+    <script src="../saim-energy.github.io/js/weather-table.js"></script>
+    <script src="../saim-energy.github.io/js/energy-chart.js"></script>
+
+
+
 </body>
+<!-- FOOTER-->
+<footer id="myFooter" class="row col col-12 bg-dark d-flex flex-column align-items-left">
+    <div class="row col col-12 d-flex flex-column ">
+        <p><b>Links</b><br>
+            <a href="https://www.uni-muenster.de/de/">University</a><br>
+            <a href="https://github.com/SAIM-Gruene-Energie-Muenster/saim-energy.github.io">GitHub
+                Repository</a>
+        </p>
+    </div>
+    <div id="copyrightText" class="footer-copyright">
+        <p>© 2022 Seminar Aufladen in Münster mit Christian Knoth</p>
+    </div>
+</footer>
 
 </html>
