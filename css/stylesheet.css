@@ -5,26 +5,38 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(12, 55, 90,0.5) !important;
     height: 100vh;
-    min-height: 100vh;
+    min-height: 90vh;
   }
-#main{ height: 95vh;}
+#main{
+    height: 95vh;
+    overflow: auto;
+}
 #map {
-    width: 300px; 
-    height: 300px;
+    height: 500px;
+    width: auto;
     display: inline-block;
     box-shadow: 5px 5px 10px;
     box-shadow: grey;
 }
+/*
+#time-slot-input{
+    display: inline-block;
+}*/
+#time_start_button, #time_stop_button{
+    display: inline-block;
+    margin-right: 5px;
+ }
 #textContent{
     color: rgb(12, 55, 90);
-    display: inline-block;
     padding: 10px;
     text-align:center;
 }
 #contentFrame{
+    display: inline-block;
     position: relative;
     top: 5rem;
 }
+/*
 #weather_table{
     border-collapse:separate;
     border:solid black 1px;
@@ -34,26 +46,26 @@ body {
 #th, td { 
     border:1px solid rgb(5, 83, 79); 
 }
+*/
 #spacer{
     height: 6.5rem;
     width: 100%;
 }
 
-  @media screen and (max-width: 1560px) {
+@media screen and (max-width: 1360px) {
     #map {
-        width: 450px; 
-        height: 450px;
+        width: 350px; 
+        height: 350px;
     }
-  }
-  
-  
-  @media screen and (max-width: 767px) {
-      #map {
-        width: 300px; 
-        height: 300px;
+}
+@media screen and (max-width: 667px) {
+    #map {
+        width: 200px; 
+        height: 200px;
         box-shadow: none;
     }
-  }
+}
+
 .even{
     background-color: rgb(12, 55, 90,0.5);
     padding: 0.2rem;

@@ -27,11 +27,11 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link text-light active rounded" href="../saim-energy.github.io/index_auswahl.html">Übersicht</a>
+                        <a class="nav-link text-light active rounded" href="../saim-energy.github.io/index.html">Übersicht</a>
                     </li>
-                    <li class="nav-item">
+                    <!--li class="nav-item">
                         <a class="nav-link text-light rounded" href="../saim-energy.github.io/index_ansicht.html">Ansicht</a>
-                    </li>
+                    </li-->
                     <li class="nav-item">
                         <a class="nav-link text-light rounded" href="../saim-energy.github.io/impressum.html">Impressum</a>
                     </li>
@@ -50,19 +50,25 @@
 
                  
 
-                    <p>Startzeit</p>
-                    <input type="time" id="start_date" name="trip-start" value="00:00" min="00:00" max="23:30">
-                    <p>Endzeit</p>
-                    <input type="time" id="end_date" name="trip-start" value="23:45" min="00:15" max="23:45">
-                    <button id="submit_button" onclick="selectData()">submit </button>
+                    <div id="time-slot-input" class="inline">
+                        <div id="time_start_button">
+                            <p>Startzeit</p>
+                            <input type="time" id="start_date" name="trip-start" value="00:00" min="00:00" max="23:30">
+                        </div>
+                        <div id="time_stop_button">
+                            <p>Endzeit</p>
+                            <input type="time" id="end_date" name="trip-start" value="23:45" min="00:15" max="23:45">
+                        </div>
+                        <button id="submit_button" onclick="selectData()">submit </button>
+                   </div>
+
                 </div>  
             </div>
             <div id="map" class="col col-lg-8 col-12 border border-dark rounded align-self-lg-end"></div>
-            <script src="../saim-energy.github.io/data/ladesaulen.js"></script>
-           
-            <script src="../saim-energy.github.io/data/strommix.js"></script>
-            <script src="../saim-energy.github.io/js/script.js"></script>
         </div>
+        <script src="../saim-energy.github.io/data/ladesaulen.js"></script>       
+        <script src="../saim-energy.github.io/data/strommix.js"></script>
+        <script src="../saim-energy.github.io/js/script.js"></script>
     </div>
 
     <!-- FOOTER-->

@@ -1,4 +1,4 @@
-
+/*
 try {
     console.log(api_key);
 } catch (error) {
@@ -43,3 +43,6 @@ function create_weather_table(input_data) {
     row.insertCell().innerHTML = input_data.wind.speed
     return -1
 }
+
+
+*/
