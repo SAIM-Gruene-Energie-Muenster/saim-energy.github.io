@@ -41,15 +41,14 @@
     
     
         <!--Main Content-->
-        <div id="contentFrame" class="d-flex justify-content-center flex-wrap align-items-center p-5">
+        <div id="contentFrame" class="d-flex flex-wrap px-5 pb-5" style="flex:1; height:100%;">
             <div id="textContent" class=" col col-lg-4 col-12 rounded text-center">
                 <h1> E-Ladestationen in Münster</h1>
                 <p>Ladesäulen mit grünen Markern bieten Ökostrom an. Bei den anderen ist es teils noch unklar.</p>
                 <p>Klicken Sie die PopUps an, für mehr Info</p>
                 <div id="introduction">
 
-                    <p>Die Daten des exemplarischen Sommertages sind vom 23.05.2021</p>
-                    <p>Die Daten des exemplarischen Wintertages sind vom 04.01.2022</p>
+                 
 
                     <div id="time-slot-input" class="inline">
                         <div id="time_start_button">
@@ -62,9 +61,12 @@
                         </div>
                         <button id="submit_button" onclick="selectData()">submit </button>
                    </div>
+
                 </div>  
             </div>
-            <div id="map" class="col col-lg-8 col-12 border border-dark rounded align-self-lg-end"></div>
+            <div class="d-flex align-stretch pb-5" style = "flex:1">  
+                <div id="map" class="border border-dark rounded"></div>
+            </div>
         </div>
         <script src="../saim-energy.github.io/data/ladesaulen.js"></script>       
         <script src="../saim-energy.github.io/data/strommix.js"></script>

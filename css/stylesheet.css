@@ -12,8 +12,8 @@ body {
     overflow: auto;
 }
 #map {
-    height: 500px;
-    width: auto;
+    height: 100%;
+    width: 100%;
     display: inline-block;
     box-shadow: 5px 5px 10px;
     box-shadow: grey;
@@ -54,8 +54,8 @@ body {
 
 @media screen and (max-width: 1360px) {
     #map {
-        width: 350px; 
-        height: 350px;
+        width: 100%; 
+        height: 100%;
     }
 }
 @media screen and (max-width: 667px) {
