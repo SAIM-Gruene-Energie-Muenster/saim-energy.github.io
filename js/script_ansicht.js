@@ -2,6 +2,7 @@ main()
 
 function main() {
   var timeframe = return_timeframe()
+  sessionStorage.setItem("timeframe", timeframe)
   console.log(SM_WT);
   console.log(SM_ST);
 
@@ -12,9 +13,9 @@ function main() {
   var analyzed_data_WT = calc_average(filtered_data_WT)
   var analyzed_data_ST = calc_average(filtered_data_ST)
 
-  
-  
-  
+
+
+
 
   console.log("analyzed_data_WT");
   console.log(analyzed_data_WT);
@@ -93,39 +94,39 @@ function calc_average(elmt) {
 
   for (var i = 0; i < elmt.length; i++) {
 
-    sum_biomasse +=   parseFloat(elmt[i].biomasse.wert)
-    sum_wasserkraft +=  parseFloat(elmt[i].wasserkraft.wert)
-    sum_windoff +=  parseFloat(elmt[i].windoffshore.wert)
-    sum_windon +=  parseFloat(elmt[i].windonshore.wert)
+    sum_biomasse += parseFloat(elmt[i].biomasse.wert)
+    sum_wasserkraft += parseFloat(elmt[i].wasserkraft.wert)
+    sum_windoff += parseFloat(elmt[i].windoffshore.wert)
+    sum_windon += parseFloat(elmt[i].windonshore.wert)
 
-    sum_photo +=  parseFloat(elmt[i].photovoltaik.wert)
-    sum_sonst_e_energ +=  parseFloat(elmt[i].sonst_e_energ.wert)
-    sum_kernenergie +=  parseFloat(elmt[i].kernenergie.wert)
-    sum_braunkohle +=  parseFloat(elmt[i].braunkohle.wert)
+    sum_photo += parseFloat(elmt[i].photovoltaik.wert)
+    sum_sonst_e_energ += parseFloat(elmt[i].sonst_e_energ.wert)
+    sum_kernenergie += parseFloat(elmt[i].kernenergie.wert)
+    sum_braunkohle += parseFloat(elmt[i].braunkohle.wert)
 
-    sum_steinkohle +=  parseFloat(elmt[i].steinkohle.wert)
-    sum_erdgas +=  parseFloat(elmt[i].erdgas.wert)
-    sum_pumpspeicher +=  parseFloat(elmt[i].pumpspeicher.wert)
+    sum_steinkohle += parseFloat(elmt[i].steinkohle.wert)
+    sum_erdgas += parseFloat(elmt[i].erdgas.wert)
+    sum_pumpspeicher += parseFloat(elmt[i].pumpspeicher.wert)
     sum_sonst_k_energ += parseFloat(elmt[i].sonst_k_energ.wert)
   }
 
 
   var result = {
   }
-  result.av_biomasse = sum_biomasse / elmt.length
-  result.av_wasserkraft = sum_wasserkraft / elmt.length
-  result.av_windoff = sum_windoff / elmt.length
-  result.av_windon = sum_windon / elmt.length
+  result.av_biomasse = Math.round(sum_biomasse / elmt.length)
+  result.av_wasserkraft = Math.round(sum_wasserkraft / elmt.length)
+  result.av_windoff = Math.round(sum_windoff / elmt.length)
+  result.av_windon = Math.round(sum_windon / elmt.length)
 
-  result.av_photo = sum_photo / elmt.length
-  result.av_sonst_e_energ = sum_sonst_e_energ / elmt.length
-  result.av_kernenergie = sum_kernenergie / elmt.length
-  result.av_braunkohle = sum_braunkohle / elmt.length
+  result.av_photo = Math.round(sum_photo / elmt.length)
+  result.av_sonst_e_energ = Math.round(sum_sonst_e_energ / elmt.length)
+  result.av_kernenergie = Math.round(sum_kernenergie / elmt.length)
+  result.av_braunkohle = Math.round(sum_braunkohle / elmt.length)
 
-  result.av_Steinkohle = sum_steinkohle / elmt.length
-  result.av_erdgas = sum_erdgas / elmt.length
-  result.av_Pumpspeicher = sum_pumpspeicher / elmt.length
-  result.av_sonst_k_energ = sum_sonst_k_energ / elmt.length
+  result.av_Steinkohle = Math.round(sum_steinkohle / elmt.length)
+  result.av_erdgas = Math.round(sum_erdgas / elmt.length)
+  result.av_Pumpspeicher = Math.round(sum_pumpspeicher / elmt.length)
+  result.av_sonst_k_energ = Math.round(sum_sonst_k_energ / elmt.length)
 
 
   return result
