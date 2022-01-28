@@ -86,8 +86,8 @@ var ST_barColors = [
 
 // get Element by id ?????????
 
-var winter_day = '2022-01-04 ' + sessionStorage.getItem("Start") + '-' + sessionStorage.getItem("Ende") + " Uhr"
-var summer_day = '2022-05-23 ' + sessionStorage.getItem("Start") + '-' + sessionStorage.getItem("Ende") + " Uhr"
+var winter_day = '04.01.2022 ' + sessionStorage.getItem("Start") + '-' + sessionStorage.getItem("Ende") + " Uhr"
+var summer_day = '23.05.2021 ' + sessionStorage.getItem("Start") + '-' + sessionStorage.getItem("Ende") + " Uhr"
 
 new Chart("winterchart", {
   type: "pie",
@@ -102,7 +102,7 @@ new Chart("winterchart", {
     legend: { display: false },
     title: {
       display: true,
-      text: "Tagesdurchschnitte " + winter_day + " in Megawatt:"
+      text: "Tagesdurchschnitte " + winter_day + " in Megawatt (gerundet):"
     }
   }
 });
@@ -120,7 +120,7 @@ new Chart("summerchart", {
     legend: { display: false },
     title: {
       display: true,
-      text: "Tagesdurchschnitte " + summer_day + " in Megawatt:"
+      text: "Tagesdurchschnitte " + summer_day + " in Megawatt (gerundet):"
     }
   }
 });
