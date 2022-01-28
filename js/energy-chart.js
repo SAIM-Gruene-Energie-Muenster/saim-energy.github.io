@@ -37,7 +37,10 @@ var WT_yValues = [
 
 
 ];
-var WT_barColors = ["blue", "green", "gray", "brown"];
+var WT_barColors = [
+  "blue", "yellow", "lightblue", "pink",
+  "green", "red", "orange", "brown",
+  "gray", "darkgreen", "purple", "darkblue"];
 
 
 
@@ -76,7 +79,10 @@ var ST_yValues = [
   sessionStorage.getItem("AD_ST.sonst_k_energ")
 
 ];
-var ST_barColors = ["blue", "green", "gray", "brown"];
+var ST_barColors = [
+  "blue", "yellow", "lightblue", "pink",
+  "green", "red", "orange", "brown",
+  "gray", "darkgreen", "purple", "darkblue"];
 
 // get Element by id ?????????
 
