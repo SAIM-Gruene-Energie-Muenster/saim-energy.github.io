@@ -102,7 +102,7 @@ new Chart("winterchart", {
     legend: { display: false },
     title: {
       display: true,
-      text: "Tagesdurchschnitte " + winter_day + " in Megawatt (gerundet):"
+      text: "Tagesdurchschnitte " + winter_day + " in Tsd. Megawatt (gerundet):"
     }
   }
 });
@@ -120,7 +120,7 @@ new Chart("summerchart", {
     legend: { display: false },
     title: {
       display: true,
-      text: "Tagesdurchschnitte " + summer_day + " in Megawatt (gerundet):"
+      text: "Tagesdurchschnitte " + summer_day + " in Tsd. Megawatt (gerundet):"
     }
   }
 });

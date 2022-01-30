@@ -73,6 +73,7 @@ function return_timeframe() {
 
 
 function calc_average(elmt) {
+  //console.log(elmt);
 
   var sum_biomasse = 0
   var sum_wasserkraft = 0
