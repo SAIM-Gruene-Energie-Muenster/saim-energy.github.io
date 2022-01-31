@@ -250,8 +250,7 @@ function create_leafleatmap(attributes) {
         "Anschussleistung [kW]:" + ladesaulen[i]["Anschlussleistung [kW]"] + '<br>' +
         "Art der Ladeeinrichtung" + ladesaulen[i]["Art der Ladeeinrichtung"] + '<br>' +
         "Anzahl Ladepunkte:" + ladesaulen[i]["Anzahl Ladepunkte"] + '<br>' +
-        "Steckertypen" + ladesaulen[i].Steckertypen1 + '<br>' +
-        "Attribut" + attributes
+        "Steckertypen" + ladesaulen[i].Steckertypen1 + '<br>'
       )
 
 

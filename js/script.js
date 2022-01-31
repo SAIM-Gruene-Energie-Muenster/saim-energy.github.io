@@ -62,8 +62,7 @@ var redIcon = new L.Icon({
         "Anschussleistung [kW] :" + ladesaulen[i]["Anschlussleistung [kW]"] + '<br>' +
         "Art der Ladeeinrichtung " + ladesaulen[i]["Art der Ladeeinrichtung"] + '<br>' +
         "Anzahl Ladepunkte: " + ladesaulen[i]["Anzahl Ladepunkte"] + '<br>' +
-        "Steckertypen " + ladesaulen[i].Steckertypen1 + '<br>' +
-        "Attribut "+ attributes
+        "Steckertypen " + ladesaulen[i].Steckertypen1 + '<br>' 
       )
     } else {
       L.marker(change(return_coords(ladesaulen, i)), /*{icon: redIcon}*/).addTo(map)
@@ -75,8 +74,7 @@ var redIcon = new L.Icon({
         "Anschussleistung [kW]: " + ladesaulen[i]["Anschlussleistung [kW]"] + '<br>' +
         "Art der Ladeeinrichtung " + ladesaulen[i]["Art der Ladeeinrichtung"] + '<br>' +
         "Anzahl Ladepunkte: " + ladesaulen[i]["Anzahl Ladepunkte"] + '<br>' +
-        "Steckertypen " + ladesaulen[i].Steckertypen1 + '<br>' +
-        "Attribut "+ attributes
+        "Steckertypen " + ladesaulen[i].Steckertypen1 + '<br>' 
       )
     }  
 
