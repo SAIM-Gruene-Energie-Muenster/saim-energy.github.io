@@ -6,21 +6,21 @@ function main() {
   console.log(SM_WT);
   console.log(SM_ST);
 
-
-  var filtered_data_WT = filterData(timeframe, SM_WT)
   var filtered_data_ST = filterData(timeframe, SM_ST)
-
-  var analyzed_data_WT = calc_average(filtered_data_WT)
+  var filtered_data_WT = filterData(timeframe, SM_WT)
+ 
   var analyzed_data_ST = calc_average(filtered_data_ST)
+  var analyzed_data_WT = calc_average(filtered_data_WT)
 
 
 
 
+  console.log("analyzed_data_ST");
+  console.log(analyzed_data_ST);
 
   console.log("analyzed_data_WT");
   console.log(analyzed_data_WT);
-  console.log("analyzed_data_ST");
-  console.log(analyzed_data_ST);
+
 
 
 
@@ -130,7 +130,8 @@ function calc_average(elmt) {
   result.av_Pumpspeicher = Math.round(sum_pumpspeicher / elmt.length)
   result.av_sonst_k_energ = Math.round(sum_sonst_k_energ / elmt.length)
 
-
+console.log("result");
+console.log(result);
   return result
 }
 
