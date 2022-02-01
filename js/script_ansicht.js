@@ -115,6 +115,8 @@ function calc_average(elmt) {
   var result = {
   }
   console.log(sum_photo);
+  var gesamtstrom = sum_biomasse+sum_wasserkraft+sum_windoff+sum_windon+sum_photo+sum_sonst_e_energ+sum_kernenergie+sum_braunkohle+sum_steinkohle+sum_erdgas+sum_pumpspeicher+sum_sonst_k_energ
+  console.log(gesamtstrom);
   result.av_biomasse = Math.round(sum_biomasse / elmt.length)
   result.av_wasserkraft = Math.round(sum_wasserkraft / elmt.length)
   result.av_windoff = Math.round(sum_windoff / elmt.length)
@@ -129,6 +131,7 @@ function calc_average(elmt) {
   result.av_erdgas = Math.round(sum_erdgas / elmt.length)
   result.av_Pumpspeicher = Math.round(sum_pumpspeicher / elmt.length)
   result.av_sonst_k_energ = Math.round(sum_sonst_k_energ / elmt.length)
+  result.gesamtstrom = Math.round(gesamtstrom)
 
 console.log("result");
 console.log(result);
