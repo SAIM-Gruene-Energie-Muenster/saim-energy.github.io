@@ -39,7 +39,7 @@ function main() {
   sessionStorage.setItem("AD_WT.erdgas", analyzed_data_WT.av_erdgas);
   sessionStorage.setItem("AD_WT.pumpspeicher", analyzed_data_WT.av_Pumpspeicher);
   sessionStorage.setItem("AD_WT.sonst_k_energ", analyzed_data_WT.sonst_k_energ);
-  sessionStorage.setItem("Gesamtstrom_WT", Gesamstrom_WT);
+  sessionStorage.setItem("Gesamtstrom_WT", analyzed_data_WT.gesamtstrom);
 
 
 
@@ -60,7 +60,7 @@ function main() {
   sessionStorage.setItem("AD_ST.erdgas", analyzed_data_ST.av_erdgas);
   sessionStorage.setItem("AD_ST.pumpspeicher", analyzed_data_ST.av_Pumpspeicher);
   sessionStorage.setItem("AD_ST.sonst_k_energ", analyzed_data_ST.sonst_k_energ);
-  sessionStorage.setItem("Gesamtstrom_ST", Gesamstrom_ST);
+  sessionStorage.setItem("Gesamtstrom_ST", analyzed_data_ST.gesamtstrom);
 
 }
 
@@ -118,6 +118,7 @@ function calc_average(elmt) {
   }
   console.log(sum_photo);
   var gesamtstrom = sum_biomasse+sum_wasserkraft+sum_windoff+sum_windon+sum_photo+sum_sonst_e_energ+sum_kernenergie+sum_braunkohle+sum_steinkohle+sum_erdgas+sum_pumpspeicher+sum_sonst_k_energ
+  console.log("gesamtstrom");
   console.log(gesamtstrom);
   result.av_biomasse = Math.round(sum_biomasse / elmt.length)
   result.av_wasserkraft = Math.round(sum_wasserkraft / elmt.length)
