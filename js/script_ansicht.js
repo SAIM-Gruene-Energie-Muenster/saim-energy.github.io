@@ -95,25 +95,26 @@ function calc_average(elmt) {
 
   for (var i = 0; i < elmt.length; i++) {
 
-    sum_biomasse += parseFloat(elmt[i].biomasse.wert)
-    sum_wasserkraft += parseFloat(elmt[i].wasserkraft.wert)
-    sum_windoff += parseFloat(elmt[i].windoffshore.wert)
-    sum_windon += parseFloat(elmt[i].windonshore.wert)
+    sum_biomasse = sum_biomasse +  parseFloat(elmt[i].biomasse.wert)
+    sum_wasserkraft = sum_wasserkraft + parseFloat(elmt[i].wasserkraft.wert)
+    sum_windoff = sum_windoff +  parseFloat(elmt[i].windoffshore.wert)
+    sum_windon = sum_windon + parseFloat(elmt[i].windonshore.wert)
 
-    sum_photo += parseFloat(elmt[i].photovoltaik.wert)
-    sum_sonst_e_energ += parseFloat(elmt[i].sonst_e_energ.wert)
-    sum_kernenergie += parseFloat(elmt[i].kernenergie.wert)
-    sum_braunkohle += parseFloat(elmt[i].braunkohle.wert)
+    sum_photo = sum_photo + parseFloat(elmt[i].photovoltaik.wert)
+    sum_sonst_e_energ = sum_sonst_e_energ + parseFloat(elmt[i].sonst_e_energ.wert)
+    sum_kernenergie = sum_kernenergie +parseFloat(elmt[i].kernenergie.wert)
+    sum_braunkohle = sum_braunkohle + parseFloat(elmt[i].braunkohle.wert)
 
-    sum_steinkohle += parseFloat(elmt[i].steinkohle.wert)
-    sum_erdgas += parseFloat(elmt[i].erdgas.wert)
-    sum_pumpspeicher += parseFloat(elmt[i].pumpspeicher.wert)
-    sum_sonst_k_energ += parseFloat(elmt[i].sonst_k_energ.wert)
+    sum_steinkohle = sum_steinkohle+ parseFloat(elmt[i].steinkohle.wert)
+    sum_erdgas = sum_erdgas + parseFloat(elmt[i].erdgas.wert)
+    sum_pumpspeicher = sum_pumpspeicher + parseFloat(elmt[i].pumpspeicher.wert)
+    sum_sonst_k_energ = sum_sonst_k_energ+ parseFloat(elmt[i].sonst_k_energ.wert)
   }
 
 
   var result = {
   }
+  console.log(sum_photo);
   result.av_biomasse = Math.round(sum_biomasse / elmt.length)
   result.av_wasserkraft = Math.round(sum_wasserkraft / elmt.length)
   result.av_windoff = Math.round(sum_windoff / elmt.length)
