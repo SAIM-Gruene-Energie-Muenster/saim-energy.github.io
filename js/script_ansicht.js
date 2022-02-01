@@ -39,6 +39,7 @@ function main() {
   sessionStorage.setItem("AD_WT.erdgas", analyzed_data_WT.av_erdgas);
   sessionStorage.setItem("AD_WT.pumpspeicher", analyzed_data_WT.av_Pumpspeicher);
   sessionStorage.setItem("AD_WT.sonst_k_energ", analyzed_data_WT.sonst_k_energ);
+  sessionStorage.setItem("Gesamtstrom_WT", Gesamstrom_WT);
 
 
 
@@ -59,6 +60,7 @@ function main() {
   sessionStorage.setItem("AD_ST.erdgas", analyzed_data_ST.av_erdgas);
   sessionStorage.setItem("AD_ST.pumpspeicher", analyzed_data_ST.av_Pumpspeicher);
   sessionStorage.setItem("AD_ST.sonst_k_energ", analyzed_data_ST.sonst_k_energ);
+  sessionStorage.setItem("Gesamtstrom_ST", Gesamstrom_ST);
 
 }
 
