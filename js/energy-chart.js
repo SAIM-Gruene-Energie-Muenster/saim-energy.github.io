@@ -85,9 +85,13 @@ var ST_barColors = [
   "gray", "darkgreen", "purple", "darkblue"];
 
 // get Element by id ?????????
+console.log("Gesamtstrom_WT");
+console.log(sessionStorage.getItem("Gesamtstrom_WT"));
+console.log("Gesamtstrom_ST");
+console.log(sessionStorage.getItem("Gesamtstrom_ST"));
 
-var winter_day = '04.01.2022 ' + sessionStorage.getItem("Start") + '-' + sessionStorage.getItem("Ende") + " Uhr; Gesamtstrom"+ sessionStorage.getItem("Gesamtstrom_WT")
-var summer_day = '23.05.2021 ' + sessionStorage.getItem("Start") + '-' + sessionStorage.getItem("Ende") + " Uhr; Gesamtstrom"+sessionStorage.getItem("Gesamtstrom_ST")
+var winter_day = '04.01.2022 ' + sessionStorage.getItem("Start") + '-' + sessionStorage.getItem("Ende") + " Uhr; Gesamtstrom: "+ sessionStorage.getItem("Gesamtstrom_WT")
+var summer_day = '23.05.2021 ' + sessionStorage.getItem("Start") + '-' + sessionStorage.getItem("Ende") + " Uhr; Gesamtstrom: "+ sessionStorage.getItem("Gesamtstrom_ST")
 
 new Chart("winterchart", {
   type: "pie",
